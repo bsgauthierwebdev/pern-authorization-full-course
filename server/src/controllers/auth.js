@@ -8,3 +8,15 @@ exports.getUsers = async (req, res) => {
         console.log(err.message)
     }
 }
+
+exports.register = async (req, res) => {
+    try {
+        // const {rows} = await db.query(
+        //     'INSERT INTO users VALUES($1, $2)'
+        // )
+        // console.log(rows)
+        console.log('validation test passed')
+    } catch (err) {
+        console.log(err.message)
+    }
+}
