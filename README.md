@@ -24,9 +24,10 @@ https://www.youtube.com/watch?v=ykB4KeuxKVI&t=0s
  5. Run application & test with basic routes
  6. Set database.sql file
  7. Connect to the database with pg & test query
- 8. Finish the register function
- 9. Set validation for login
-10. Finish the login function
-11. Create passport strategy & auth middleware
-12. Test auth middleware with protected routes
-13. Create logout function with auth middleware
+ 8. Set validations for register function & test errors with express validator middleware
+ 9. Finish the register function
+10. Set validation for login
+11. Finish the login function
+12. Create passport strategy & auth middleware
+13. Test auth middleware with protected routes
+14. Create logout function with auth middleware
