@@ -17,7 +17,7 @@ https://www.youtube.com/watch?v=ykB4KeuxKVI&t=0s
 - dotenv for hiding environment variables
 
 ### Workflow for the video:
- 1. Initialize project & create .gitignore file
+ 1. Initialize project & create gitignore file
  2. Download PostgreSQL
  3. Create project structure
  4. Set environment variables
