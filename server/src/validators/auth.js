@@ -35,6 +35,8 @@ const loginFieldsCheck = check('email').custom(async (value, {req}) => {
     if (!validPassword) {
         throw new Error('Password does not match')
     }
+
+    req.user = user.rows[0]
 })
 
 module.exports = {
