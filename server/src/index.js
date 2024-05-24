@@ -2,10 +2,15 @@ const express = require('express')
 const app = express()
 const {PORT} = require('./constants')
 const cookieParser = require('cookie-parser')
+const passport = require('passport')
+
+// Import passport middleware
+require('./middlewares/passport-middleware')
 
 // Initialize middlewares
 app.use(express.json())
 app.use(cookieParser())
+app.use(passport.initialize())
 
 // Import Routes
 const authRoutes = require('./routes/auth')
