@@ -67,3 +67,21 @@ exports.protected = async(req, res) => {
         console.log(err.message)
     }
 }
+
+exports.logout = async(req, res) => {
+    try {
+        // No need to check for credentials, only delete the cookie
+        return res
+            .status(200)
+            .clearCookie('token', {httpOnly: true})
+            .json({
+                success: true,
+                message: 'Logged out successfully'
+        })
+    } catch (err) {
+        console.log(err.message)
+        return res.status(500).json({
+            error: err.message
+        })
+    }
+}
