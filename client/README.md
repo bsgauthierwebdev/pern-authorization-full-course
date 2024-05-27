@@ -1,3 +1,35 @@
+# PERN Authentication Full Course
+
+### A YouTube turorial on building a full-stack PERN application with authentication.
+
+https://www.youtube.com/watch?v=4TgbH3TM51s&t=0s
+
+## Details
+- PERN (PostgreSQL, Express, React.js, Node.js)
+
+### Tech Stack:
+React.js - Front-end framework
+Bootstrap - Styling (minimal)
+React Router v6 - App navigation
+Redux Toolkit - State management
+ - Use command npx create-react-app client --template redux to create the React front-end application with Redux dependency already installed and set up
+
+### Workflow:
+ 1. Clean all unnecessary files & structure the project
+ 2. Connect bootstrap
+ 3. Install all needed packages (Axios, React-Router-Dom)
+ 4. Create pages folder with all the pages
+ 5. Create all routes inside the app folder
+ 6. Create components for private & restricted routes
+ 7. Create components folder with navbar & layout
+ 8. Structure the redux folders & create auth slice with reducers
+ 9. Create auth api functions to communicate with the backend
+ 10. Complete the functionality for register, login, logout & dashboard pages
+
+
+-----------------------------------------------------------------------
+
+
 # Getting Started with Create React App and Redux
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
