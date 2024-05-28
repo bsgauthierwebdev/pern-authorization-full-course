@@ -11,14 +11,42 @@ import Dashboard from '../src/pages/dashboard'
 import Register from '../src/pages/register'
 import Login from '../src/pages/login'
 
+// Route Components
+
+const PrivateRoutes = () => {
+  const isAuth = false
+
+  return (
+    <>
+      {isAuth ? <Outlet /> : <Navigate to = '/login' />}
+    </>
+  )
+}
+
+const RestrictedRoutes = () => {
+  const isAuth = false
+
+  return (
+    <>
+      {!isAuth ? <Outlet /> : <Navigate to = '/dashboard' />}
+    </>
+  )
+}
+
 const App = () => {
   return (
     <Router>
       <Routes>
         <Route exact path = '/' element = {<Home />} />
-        <Route exact path = '/dashboard' element = {<Dashboard />} />
-        <Route exact path = '/register' element = {<Register />} />
-        <Route exact path = '/login' element = {<Login />} />
+
+        <Route element = {<PrivateRoutes />}>
+          <Route exact path = '/dashboard' element = {<Dashboard />} />
+        </Route>
+
+        <Route element = {<RestrictedRoutes />}>
+          <Route exact path = '/register' element = {<Register />} />
+          <Route exact path = '/login' element = {<Login />} />
+        </Route>        
       </Routes>
     </Router>
   )
