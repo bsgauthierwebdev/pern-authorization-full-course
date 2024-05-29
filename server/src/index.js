@@ -11,8 +11,16 @@ require('./middlewares/passport-middleware')
 // Initialize middlewares
 app.use(express.json())
 app.use(cookieParser())
-app.use(cors({orgin: CLIENT_URL, credentials: true}))
+// app.use(cors({origin: CLIENT_URL, credentials: true}))
 app.use(passport.initialize())
+
+const corsOptions = {
+    origin: CLIENT_URL,
+    credentials: true,
+    optionSuccessStatus: 200
+}
+
+app.use(cors(corsOptions))
 
 // Import Routes
 const authRoutes = require('./routes/auth')
