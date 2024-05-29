@@ -10,6 +10,7 @@ import Home from '../src/pages/home'
 import Dashboard from '../src/pages/dashboard'
 import Register from '../src/pages/register'
 import Login from '../src/pages/login'
+import Navbar from './components/Navbar'
 
 // Route Components
 
@@ -36,6 +37,7 @@ const RestrictedRoutes = () => {
 const App = () => {
   return (
     <Router>
+      {/* <Navbar /> */}
       <Routes>
         <Route exact path = '/' element = {<Home />} />
 
