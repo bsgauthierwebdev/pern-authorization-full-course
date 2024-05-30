@@ -11,11 +11,14 @@ import Dashboard from '../src/pages/dashboard'
 import Register from '../src/pages/register'
 import Login from '../src/pages/login'
 import Navbar from './components/Navbar'
+import { useSelector } from 'react-redux'
 
 // Route Components
 
 const PrivateRoutes = () => {
-  const isAuth = false
+  // const isAuth = false
+  const {isAuth} = useSelector((state) => state.auth)
+  // console.log(authState)
 
   return (
     <>
@@ -25,7 +28,8 @@ const PrivateRoutes = () => {
 }
 
 const RestrictedRoutes = () => {
-  const isAuth = false
+  // const isAuth = false
+  const {isAuth} = useSelector((state) => state.auth)
 
   return (
     <>
