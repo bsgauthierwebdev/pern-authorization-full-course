@@ -23,7 +23,7 @@ function Navbar() {
                 </div>
             ) : (
                 <div>
-                    <NavLink to = 'login'>
+                    <NavLink to = '/login'>
                         <span>Login</span>
                     </NavLink>
 
